@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyamde Squad Ports</title>
+  <style>
+    body {
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-bottom: 2px solid #ff7f00;
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      text-align: left;
+      max-width: 800px;
+      width: 100%;
+      margin-top: 20px;
+      animation: fadeIn 1s ease-out;
+      backdrop-filter: blur(5px);
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #ff7f00;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+
+    .section {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      margin-bottom: 10px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    .section:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .content {
+      display: none;
+      padding: 10px;
+      border-top: 1px solid #666;
+      backdrop-filter: blur(5px);
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      background: #ff7f00;
+      border-radius: 50%;
+      margin: 20px;
+      display: inline-block;
+      animation: rotate 2s linear infinite;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .active {
+      background-color: #ff7f00;
+    }
+
+    .not-added {
+      color: #ff0000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lyamde Squad Ports</h1>
+  </header>
+
+  <div class="container">
+    <p>Lyamde Squad Ports is a project focused on bringing Source engine games to various platforms, including Android, Windows, and Linux. The project boasts cross-platform compatibility and a functional multiplayer experience, all while maintaining closed-source code to avoid issues with Valve.</p>
+
+    <h2>Available Platforms</h2>
+    <div>
+      <button id="linuxBtn" onclick="showGames('linux')">Linux</button>
+      <button id="windowsBtn" onclick="showGames('windows')">Windows</button>
+      <button id="androidBtn" onclick="showGames('android')">Android</button>
+    </div>
+
+    <div id="linux" class="accordion">
+      <div class="section" onclick="showLinks('linux', 'counter-strike')">Counter-Strike</div>
+      <div class="section" onclick="showLinks('linux', 'counter-strike-source')">Counter-Strike: Source</div>
+      <div class="section" onclick="showLinks('linux', 'half-life')">Half-Life</div>
+      <div class="section" onclick="showLinks('linux', 'half-life-2')">Half-Life 2</div>
+      <div class="section" onclick="showLinks('linux', 'half-life-2-ep1')">Half-Life 2: ep1</div>
+      <div class="section" onclick="showLinks('linux', 'half-life-2-ep2')">Half-Life 2: ep2</div>
+      <div class="section" onclick="showLinks('linux', 'left-4-dead')">Left 4 Dead</div>
+      <div class="section" onclick="showLinks('linux', 'left-4-dead-2')">Left 4 Dead 2</div>
+      <div class="section" onclick="showLinks('linux', 'portal')">Portal</div>
+      <div class="section" onclick="showLinks('linux', 'portal-2')">Portal 2</div>
+      <div class="section" onclick="showLinks('linux', 'half-life-2-deathmatch')">Half-Life 2: DeathMatch</div>
+    </div>
+
+    <div id="windows" class="accordion">
+      <div class="section" onclick="showLinks('windows', 'counter-strike')">Counter-Strike</div>
+      <div class="section" onclick="showLinks('windows', 'counter-strike-source')">Counter-Strike: Source</div>
+      <div class="section" onclick="showLinks('windows', 'half-life')">Half-Life</div>
+      <div class="section" onclick="showLinks('windows', 'half-life-2')">Half-Life 2</div>
+      <div class="section" onclick="showLinks('windows', 'half-life-2-ep1')">Half-Life 2: ep1</div>
+      <div class="section" onclick="showLinks('windows', 'half-life-2-ep2')">Half-Life 2: ep2</div>
+      <div class="section" onclick="showLinks('windows', 'left-4-dead')">Left 4 Dead</div>
+      <div class="section" onclick="showLinks('windows', 'left-4-dead-2')">Left 4 Dead 2</div>
+      <div class="section" onclick="showLinks('windows', 'portal')">Portal</div>
+      <div class="section" onclick="showLinks('windows', 'portal-2')">Portal 2</div>
+      <div class="section" onclick="showLinks('windows', 'half-life-2-deathmatch')">Half-Life 2: DeathMatch</div>
+    </div>
+
+    <div id="android" class="accordion">
+      <div class="section" onclick="showLinks('android', 'counter-strike')">Counter-Strike</div>
+      <div class="section" onclick="showLinks('android', 'counter-strike-source')">Counter-Strike: Source</div>
+      <div class="section" onclick="showLinks('android', 'half-life')">Half-Life</div>
+      <div class="section" onclick="showLinks('android', 'half-life-2')">Half-Life 2</div>
+      <div class="section" onclick="showLinks('android', 'half-life-2-ep1')">Half-Life 2: ep1</div>
+      <div class="section" onclick="showLinks('android', 'half-life-2-ep2')">Half-Life 2: ep2</div>
+      <div class="section" onclick="showLinks('android', 'left-4-dead')">Left 4 Dead</div>
+      <div class="section" onclick="showLinks('android', 'left-4-dead-2')">Left 4 Dead 2</div>
+      <div class="section" onclick="showLinks('android', 'portal')">Portal</div>
+      <div class="section" onclick="showLinks('android', 'portal-2')">Portal 2</div>
+      <div class="section" onclick="showLinks('android', 'half-life-2-deathmatch')">Half-Life 2: DeathMatch</div>
+    </div>
+  </div>
+
+  <script>
+    function showGames(platform) {
+      document.getElementById('linux').style.display = 'none';
+      document.getElementById('windows').style.display = 'none';
+      document.getElementById('android').style.display = 'none';
+
+      document.getElementById(`${platform}`).style.display = 'flex';
+
+      document.getElementById('linuxBtn').classList.remove('active');
+      document.getElementById('windowsBtn').classList.remove('active');
+      document.getElementById('androidBtn').classList.remove('active');
+
+      document.getElementById(`${platform}Btn`).classList.add('active');
+    }
+
+    function showLinks(platform, game) {
+      alert(`Links for ${game} on ${platform} will be provided soon.`);
+
+
+      if (document.getElementById(`${platform}-${game}-link`) === null) {
+        document.getElementById(`${platform}-${game}`).classList.add('not-added');
+      }
+    }
+  </script>
+</body>
+</html>

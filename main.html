@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyamde Squad</title>
+  <style>
+    body {
+      background-image: url('lyamde.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-bottom: 2px solid #ff7f00;
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      text-align: left;
+      max-width: 800px;
+      width: 100%;
+      margin-top: 20px;
+      animation: fadeIn 1s ease-out;
+      backdrop-filter: blur(5px);
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #ff7f00;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .tab {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .tab button {
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    .tab button:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    #PortsContent,
+    #MainContent {
+      display: none;
+    }
+
+    #MainContent {
+      display: block;
+    }
+
+    #CodeExamples {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+      backdrop-filter: blur(5px);
+    }
+
+    .code-example {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .copy-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      color: #fff;
+      padding: 5px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .copy-button:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    #Terminal {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      width: 100%;
+      height: 300px;
+      overflow-y: scroll;
+      animation: fadeIn 1s ease-out;
+      backdrop-filter: blur(5px);
+    }
+
+    #TerminalOutput {
+      color: #fff;
+      white-space: pre-wrap;
+    }
+
+    #TerminalInput {
+      color: #00ff00;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    #InputField {
+      border: none;
+      background: transparent;
+      color: #00ff00;
+      width: 100%;
+      margin-left: 5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lyamde Squad</h1>
+  </header>
+
+  <div class="container">
+    <div class="tab">
+      <button onclick="openTab('Ports')">Ports</button>
+      <button onclick="openTab('Main')">Main</button>
+    </div>
+
+    <div id="PortsContent">
+      <h2>Ports Information</h2>
+      <p>Explore our ports for various platforms, including Android, Windows, and Linux. Check out the Source engine games we've successfully brought to new environments.</p>
+      <h3>Code Example for Android Port:</h3>
+      <div id="CodeExamples">
+        <div class="code-example">
+          <button class="copy-button" onclick="copyCode('androidCode')">Copy</button>
+          <pre id="androidCode">
+            <code>
+public class AndroidPort {
+  public static void main(String[] args) {
+    System.out.println("Lyamde Squad Android Port");
+    // Your Android port code here
+  }
+            </code>
+          </pre>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec hendrerit metus. Nullam imperdiet massa ut nisi hendrerit, ac ullamcorper orci gravida. Vestibulum dapibus malesuada faucibus. Integer cursus arcu vel risus euismod, vel ullamcorper arcu sollicitudin.</p>
+      <h3>More Information:</h3>
+      <ul>
+        <li>Project A: Bringing Source engine to mobile devices</li>
+        <li>Project B: Cross-platform multiplayer development</li>
+        <li>Project C: Advancements in game portability</li>
+      </ul>
+    </div>
+
+    <div id="MainContent">
+      <h2>Main Page</h2>
+      <p>Welcome to the main page of Lyamde Squad. Discover the latest news, updates, and projects we're working on. Stay tuned for exciting developments!</p>
+      <h3>Our Mission</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec hendrerit metus. Nullam imperdiet massa ut nisi hendrerit, ac ullamcorper orci gravida.</p>
+      <h3>Latest Projects</h3>
+      <ul>
+        <li>A: Bringing Source engine to mobile devices</li>
+        <li>B: Cross-platform multiplayer development</li>
+        <li>C: Advancements in game portability</li>
+        <li>D: Exploring AI integration in gaming</li>
+      </ul>
+      <h3>Upcoming Events</h3>
+      <p>Stay tuned for our upcoming events, including game launches, live streams, and community meetups.</p>
+    </div>
+
+    <div id="Terminal">
+      <div id="TerminalOutput">Today time to fuck Terminal Yeah?</div>
+      <div id="TerminalInput">
+        $<input id="InputField" type="text" placeholder="Type a command...">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      if (tabName === 'Ports') {
+        window.location.href = 'ports.html';
+        return;
+      }
+
+      document.getElementById('PortsContent').style.display = 'none';
+      document.getElementById('MainContent').style.display = 'none';
+
+      document.getElementById(`${tabName}Content`).style.display = 'block';
+    }
+
+    document.getElementById('InputField').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        processCommand(this.value);
+        this.value = '';
+      }
+    });
+
+    function processCommand(command) {
+      const outputDiv = document.getElementById('TerminalOutput');
+      switch (command.toLowerCase()) {
+        case 'help':
+          outputDiv.innerHTML += '<br>Available commands: help, about, contact';
+          break;
+        case 'about':
+          outputDiv.innerHTML += '<br>Lyamde Squad - Bringing Source engine games to new horizons.';
+          break;
+        case 'contact':
+          outputDiv.innerHTML += '<br>Contact us at xmodea@lyamdesquad';
+          break;
+        default:
+          outputDiv.innerHTML += `<br>Command not recognized: ${command}`;
+          break;
+      }
+    }
+
+    function copyCode(id) {
+      const code = document.getElementById(id);
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand('copy');
+      selection.removeAllRanges();
+    }
+  </script>
+</body>
+</html>
